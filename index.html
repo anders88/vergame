@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synstrening</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Start screen -->
+  <div id="start-screen">
+    <h1>Synstrening</h1>
+    <p>Firkanter beveger seg over skjermen.<br>Trykk på dem for å få poeng!</p>
+    <p class="hint">Raskere klikk = mer poeng</p>
+    <button id="start-btn">Start spill</button>
+  </div>
+
+  <!-- Game over screen -->
+  <div id="gameover-screen" class="hidden">
+    <h1>Spill over!</h1>
+    <p>Poeng: <span id="final-score">0</span></p>
+    <p>Nivå nådd: <span id="final-level">1</span></p>
+    <button id="restart-btn">Spill igjen</button>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div class="hud-item">Poeng: <span id="score">0</span></div>
+    <div class="hud-item">Nivå: <span id="level">1</span></div>
+    <div class="hud-item">Tid: <span id="timer">60</span>s</div>
+  </div>
+
+  <!-- Game area -->
+  <div id="game-area" class="hidden"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
