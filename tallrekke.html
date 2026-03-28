@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tallrekke</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Setup screen -->
+  <div id="setup-screen">
+    <h1>Tallrekke</h1>
+    <p>Trykk på tallene i rekkefølge (1, 2, 3 …) så fort som mulig.<br>Timeren starter når du trykker på 1.</p>
+    <p class="hint">Velg størrelse:</p>
+    <div class="size-buttons">
+      <button class="size-btn" data-size="4">4 × 4</button>
+      <button class="size-btn" data-size="5">5 × 5</button>
+      <button class="size-btn" data-size="6">6 × 6</button>
+    </div>
+    <a class="back-link" href="index.html">← Tilbake</a>
+  </div>
+
+  <!-- Game screen -->
+  <div id="tr-game-screen" class="hidden">
+    <div id="tr-hud">
+      <div class="hud-item">Tid: <span id="elapsed-time">0.0</span> s</div>
+      <div class="hud-item">Neste: <span id="next-number">1</span></div>
+    </div>
+    <div id="grid-wrapper">
+      <div id="grid"></div>
+    </div>
+  </div>
+
+  <!-- Result screen -->
+  <div id="result-screen" class="hidden">
+    <h1>Ferdig!</h1>
+    <p class="result-time">Tid: <span id="final-time">0.00</span> s</p>
+    <button id="play-again-btn">Spill igjen</button>
+    <a class="back-link" href="index.html">← Meny</a>
+  </div>
+
+  <script src="tallrekke.js"></script>
+</body>
+</html>

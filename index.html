@@ -3,37 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Synstrening</title>
+  <title>Vergame</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Start screen -->
-  <div id="start-screen">
-    <h1>Synstrening</h1>
-    <p>Firkanter beveger seg over skjermen.<br>Trykk på dem for å få poeng!</p>
-    <p class="hint">Raskere klikk = mer poeng</p>
-    <button id="start-btn">Start spill</button>
+  <div id="menu-screen">
+    <h1 class="menu-title">Vergame</h1>
+    <p class="menu-subtitle">Velg et spill</p>
+    <div class="game-cards">
+      <a class="game-card" href="synstrening.html">
+        <div class="card-title">Synstrening</div>
+        <p class="card-desc">Firkanter beveger seg over skjermen. Trykk på dem så raskt du kan!</p>
+        <span class="card-tag">Reaksjonstid · 60 sek</span>
+      </a>
+      <a class="game-card" href="tallrekke.html">
+        <div class="card-title">Tallrekke</div>
+        <p class="card-desc">Finn og trykk tallene i riktig rekkefølge så fort som mulig.</p>
+        <span class="card-tag">Konsentrasjon · 4×4 / 5×5 / 6×6</span>
+      </a>
+    </div>
   </div>
-
-  <!-- Game over screen -->
-  <div id="gameover-screen" class="hidden">
-    <h1>Spill over!</h1>
-    <p>Poeng: <span id="final-score">0</span></p>
-    <p>Nivå nådd: <span id="final-level">1</span></p>
-    <button id="restart-btn">Spill igjen</button>
-  </div>
-
-  <!-- HUD -->
-  <div id="hud" class="hidden">
-    <div class="hud-item">Poeng: <span id="score">0</span></div>
-    <div class="hud-item">Nivå: <span id="level">1</span></div>
-    <div class="hud-item">Tid: <span id="timer">60</span>s</div>
-  </div>
-
-  <!-- Game area -->
-  <div id="game-area" class="hidden"></div>
-
-  <script src="game.js"></script>
 </body>
 </html>
