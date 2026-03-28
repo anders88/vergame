@@ -46,6 +46,14 @@ function buildGrid(size) {
   const numbers = Array.from({ length: size * size }, (_, i) => i + 1);
   shuffle(numbers);
 
+  const wrapper = document.getElementById('grid-wrapper');
+  const hud     = document.getElementById('tr-hud');
+  const availW  = wrapper.clientWidth - 32;
+  const availH  = window.innerHeight - hud.offsetHeight - 32;
+  const gridSize = Math.min(availW, availH, 560);
+  gridEl.style.width  = gridSize + 'px';
+  gridEl.style.height = gridSize + 'px';
+
   const fontSizes = { 4: '2rem', 5: '1.6rem', 6: '1.2rem' };
   gridEl.style.setProperty('--cell-font-size', fontSizes[size]);
   gridEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;

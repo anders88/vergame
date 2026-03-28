@@ -350,13 +350,13 @@ button:active {
   align-items: center;
   justify-content: center;
   padding: 16px;
+  overflow: hidden;
+  min-height: 0;
 }
 
 #grid {
   display: grid;
   gap: 8px;
-  width: min(80vmin, 560px);
-  height: min(80vmin, 560px);
 }
 
 /* --- Grid-celler --- */
