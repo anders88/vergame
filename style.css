@@ -119,8 +119,11 @@ button:active {
   border-radius: 8px;
   cursor: pointer;
   will-change: transform;
-  transition: transform 0.08s ease-out, opacity 0.08s;
   user-select: none;
+  /* Usynlig padding øker klikkbart område uten å endre utseende */
+  padding: 10px;
+  margin: -10px;
+  background-clip: content-box;
 }
 
 .square:hover {

@@ -48,7 +48,7 @@ const finalLevelEl  = document.getElementById('final-level');
 document.getElementById('start-btn').addEventListener('click', startGame);
 document.getElementById('restart-btn').addEventListener('click', startGame);
 
-gameArea.addEventListener('click', onGameAreaClick);
+gameArea.addEventListener('pointerdown', onGameAreaClick);
 window.addEventListener('resize', updateDimensions);
 
 // --- Init ---
@@ -183,7 +183,7 @@ function spawnSquare(cfg) {
   el.className = 'square';
   el.style.width  = `${size}px`;
   el.style.height = `${size}px`;
-  el.style.background = color;
+  el.style.backgroundColor = color;
   el.style.transform = `translate(${x}px, ${y}px)`;
 
   const id = squareIdCounter++;
